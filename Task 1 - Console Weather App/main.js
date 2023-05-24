@@ -1,8 +1,15 @@
 const { getCipherInfo, randomBytes } = require('node:crypto');
 const https = require('node:https');
 const prompt = require('prompt-sync')();
+const fs = require('node:fs')
 
-
+var api_key = '';
+try {
+    api_key = fs.readFileSync('../api_key.txt', 'utf-8');
+} catch (e) {
+    console.log(`Failed to load api_key: ${e}.`);
+    process.exit(1);
+}
 
 // 19 randomly chosen cities
 let cities = ['Praia,cv', 'Helsinki,fi,', 'Dublin,ie',
