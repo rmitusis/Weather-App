@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<u>
+    <h4>Data</h4>
+</u>
+<label for="city_name">City name:</label>
+<label id="city_name"> {{city_name}}</label>
+<br>
+<label for="temprature">Temperature:</label>
+<label id="temprature"> {{temper}} C</label>
+<br>
+<label for="humidity">Humidity:</label>
+<label id="humidity"> {{humidity}} %</label>
+<br>
+<label for="weather">The weather in {{city_name}} is </label>
+<label id="weather"> {{weather_cond}}!</label>
+<br>
+<br>
+<u>
+    <h4>Statistics</h4>
+</u>
+<label for="prev_cities">Previously checked cities: </label>
+<label id="prev_cities">{{prev_cities}}</label>
+<br>
+<label for="avg_temp">Average temperature:</label>
+<label id="avg_temp">{{avg_temp}} C</label>
+<br>
+<label for="coldest_city">The coldest city is {{coldest_city_name}} ({{coldest_city_temp}} C)</label>
+{% endblock %}
