@@ -1,8 +1,6 @@
 import requests
 import random
 
-api_key = "e66bdef54de4e4b80c94c1571cac6d4c"
-
 
 url = "https://openweathermap.org/"
 
